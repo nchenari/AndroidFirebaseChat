@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "com.londonappbrewery.flashchatnewfirebase"
+        applicationId "com.nchenari.flashchatnewfirebase"
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
@@ -24,6 +24,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
+    // library for Firebase real time database
+    compile 'com.google.firebase:firebase-database:9.0.0'
+    // library for Firebase authentication
+    compile 'com.google.firebase:firebase-auth:9.0.0'
 
 
 }
+
+// Add to the bottom of the file, Firebase Dependency
+// ...will tell Android Studio to look at google-services.json file in app level folder
+apply plugin: 'com.google.gms.google-services'
